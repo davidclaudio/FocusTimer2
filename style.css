@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size:62.5%
+}
+
+.theme{
+    position: absolute;
+    right: 2rem;
+    top:2rem;
+}
+
+.page{
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+
+.content{
+    display: flex;
+    gap: 19.2rem;
+    align-items: center;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+span{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: clamp(3rem, 4rem + 8vw, 12.66rem);
+    line-height: 14.8rem;
+    text-transform: uppercase;
+
+    color: #323238;
+}
+
+.controls{
+    margin-top: 1.7rem;
+    display: flex;
+    gap: 4.0rem;
+}
+
+button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.3rem;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: transform .3s;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.sounds .pressed {
+    background: #02799D;;
+}
+.sounds .pressed svg path{
+    fill:white
+}
+
+button svg {
+    width: clamp(3.1rem, 1rem + 3vw, 4.8rem);
+  }
+
+.range{
+    width: 9.0rem;
+    appearance: none;
+    background-color: black;
+    border-radius: .5rem;
+    height: 4px;
+    position: absolute;
+    bottom: 2rem;
+}
+
+.range.selected{
+    background-color: white;
+}
+
+.range::-webkit-slider-thumb{
+    appearance: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #323238;
+    border-radius: 50%;
+}
+
+.range.selected::-webkit-slider-thumb{
+    background-color: white;
+}
+
+.sounds{
+    display: grid;
+    width: 30.8rem;
+    grid-template-areas: 
+    'A B'
+    'C D';
+    gap: 3.2rem;
+}
+
+.wrapperButtonSound{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 13rem;
+    height: 15.2rem;
+}
+
+.sounds button{
+    width: 13rem;
+    height: 15.2rem;
+    background: #E1E1E6;
+    border-radius: 24px;
+    
+}
+
+/*Dark Mode*/
+
+.darkMode{
+    background-color: black;
+}
+
+.darkMode span{
+    color: #FFFFFF;
+}
+
+.darkMode svg path{
+    fill:#C4C4CC;
+}
+
+.darkMode .sounds button{
+    background-color: #29292E;
+}
+
+.darkMode .sounds .pressed{
+    background: #0A3442;
+}
+
+.darkMode .range{
+    background-color: #8f8f96;
+}
+
+.darkMode .range.selected{
+    background-color: white;
+}
+
+.darkMode .range::-webkit-slider-thumb{
+    /* background-color: #FFFFFF; */
+    background: #8f8f96;
+}
+
+.darkMode .range.selected::-webkit-slider-thumb{
+    background: white;
+}
